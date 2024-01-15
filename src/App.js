@@ -1,5 +1,5 @@
-import { Header, Content, Footer } from './func-component'
-import Calendar from './class-component'
+import { Header, Content, Footer } from './components/func-component'
+import Calendar from './components/class-component'
 
 function App() {
   return (
