@@ -1,5 +1,7 @@
-button {
+.button {
   display: flex;
   justify-content: center;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
