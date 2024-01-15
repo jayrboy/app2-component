@@ -37,3 +37,17 @@ export default class Calendar extends Component {
     return <div>{this.getDate()}</div>
   }
 }
+
+export class Button extends Component {
+  // Event Handler
+  showAlert(msg) {
+    alert(msg)
+  }
+  // Event Handler แบบ Arrow Function (Regular Function)
+  onClickButtonOK = () => {
+    this.showAlert('Hello')
+  }
+  render() {
+    return <button onClick={this.onClickButtonOK}>OK</button>
+  }
+}

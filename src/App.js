@@ -1,19 +1,9 @@
-import { Header, Content, Footer } from './components/func-component'
-import Calendar from './components/class-component'
+// import { Header, Content, Footer } from './components/func-component'
+// import Calendar from './components/class-component'
+import { Button } from './components/class-component'
 
 function App() {
-  return (
-    <>
-      <Header />
-      <p>
-        <center>
-          <Calendar />
-        </center>
-      </p>
-      <Content />
-      <Footer />
-    </>
-  )
+  return <Button />
 }
 
 export default App
