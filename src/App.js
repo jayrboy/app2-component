@@ -8,8 +8,7 @@ import { useState } from 'react'
 // import RefsArray from './components/RefsArray'
 // import StateFunc from './components/StateFunc'
 import { userContext } from './components/context/context'
-import Header from './components/context/Header'
-// import Content from './components/context/Content'
+import HeaderFun from './components/context/HeaderFun'
 import Content2 from './components/context/Content2'
 
 export default function App() {
@@ -17,8 +16,7 @@ export default function App() {
 
   return (
     <userContext.Provider value={[user, setUser]}>
-      <Header />
-      {/* <Content /> */}
+      <HeaderFun />
       <Content2 />
     </userContext.Provider>
   )

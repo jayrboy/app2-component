@@ -2,7 +2,7 @@
 import React from 'react'
 import { userContext } from './context'
 
-export default function Header() {
+export default function HeaderFun() {
   let [user, setUser] = React.useContext(userContext)
 
   const headerStyle = {
