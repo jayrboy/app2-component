@@ -254,3 +254,23 @@ export default function Content() {
   return <div>Hello {user}</div>
 }
 ```
+
+- เปลี่ยนไปใช้ตัวแปร state in App.js
+
+```js
+import { useState } from 'react'
+import { userContext } from './context' // Import Context
+import Header from './components/Header'
+import Content from './components/Content'
+
+export default function App() {
+  let [user, setUser] = useState()
+
+  return (
+    <userContext.Provider value={[user, setState]}>
+      <Header />
+      <Content />
+    </userContext.Provider>
+  )
+}
+```
