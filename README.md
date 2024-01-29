@@ -32,14 +32,14 @@ export default class Calendar extends Component {
 ### Import
 
 - import default
-  
-```js 
+
+```js
 import ... form './components/...'
 ```
 
 - import variable
-  
-```js 
+
+```js
 import { ... } form './components/...'
 ```
 
@@ -187,7 +187,6 @@ export const Table = () => {
     </table>
   )
 }
-
 ```
 
 src/App.js
@@ -212,7 +211,46 @@ function App() {
 export default App
 ```
 
+### useEffect
 
+### Centralized storage with Context
 
+- การกำหนดค่า Provider สำหรับ Context (แชร์ระหว่าง Component)
+- แยกไฟล์ context.js แล้วเรียกใช้งานโดยการ import
 
+```js
+import { createContext } from 'react'
 
+export const userContext = createContext()
+// ตัวแปรไม่สามารถ export default (มันจะมองเป็น module)
+```
+
+- ทำการห่อหุ้มด้วย Context App.js
+
+```js
+import { userContext } from './context' // Import Context
+import Header from './components/Header'
+import Content from './components/Content'
+
+export default function App() {
+  return (
+    <userContext.Provider value={'Jay Jakkrit'}>
+      <Header />
+      <Content />
+    </userContext.Provider>
+  )
+}
+```
+
+- การใช้ Context Data
+
+```js
+import React from 'react'
+import { userContext } from './context'
+
+export default function Content() {
+  let user = React.useContext(userContext)
+
+  return <div>Hello {user}</div>
+}
+```
