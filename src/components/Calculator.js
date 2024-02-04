@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
 /* eslint-disable */
+import { Component } from 'react'
 
-// Class Component
-export class Calculator1 extends Component {
+export class CalculatorClass extends Component {
   n1 = 20
   n2 = 4
 
@@ -25,7 +24,7 @@ export class Calculator1 extends Component {
   }
 }
 // Function Component
-export function Calculator2() {
+export function CalculatorFunc() {
   const n1 = 20
   const n2 = 4
 

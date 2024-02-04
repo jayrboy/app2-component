@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
 /* eslint-disable */
+import { Component } from 'react'
 
-// Class EventData Component
-export class EvenData extends Component {
+// Class Event Data Component
+export class EvenDataClass extends Component {
   onClickStartStop = (ev) => {
     let t = ev.target.innerHTML
     let s = t === 'Start' ? 'Stop' : 'Start'
@@ -30,9 +30,8 @@ export class EvenData extends Component {
     )
   }
 }
-
-// Arrow Function EventData-2 Component
-export const EvenData2 = () => {
+// Arrow Function Event Data Component
+export const EvenDataFunc = () => {
   const onClickStartStop = (ev) => {
     let t = ev.target.innerHTML
     let s = t === 'Start' ? 'Stop' : 'Start'
@@ -59,7 +58,7 @@ export const EvenData2 = () => {
     </div>
   )
 }
-
+// Arrow Function Table Component
 export const Table = () => {
   const data = [
     ['Javascript', 100],

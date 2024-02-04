@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export function Header() {
   const aStyle = {
     display: 'inline-block',

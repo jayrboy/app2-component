@@ -1,9 +1,9 @@
 /* eslint-disable */
-import React from 'react'
+import { useContext } from 'react'
 import { userContext } from './context'
 
 export default function HeaderFun() {
-  let [user, setUser] = React.useContext(userContext)
+  let [user, setUser] = useContext(userContext)
 
   const headerStyle = {
     backgroundColor: '#cee',
