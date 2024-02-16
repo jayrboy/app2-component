@@ -12,12 +12,14 @@ const Product = () => {
   return (
     <table border="1">
       <tr>
+        <th>#</th>
         <th>ชื่อ</th>
         <th>ราคา</th>
       </tr>
       {data.map((d, i) => {
         return (
           <tr key={i}>
+            <td>{i + 1}</td>
             <td>{d[0]}</td>
             <td>{d[1]}</td>
           </tr>
