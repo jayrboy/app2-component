@@ -11,14 +11,17 @@ import { useState } from 'react'
 import { userContext } from './components/context/context'
 import HeaderFun from './components/context/HeaderFun'
 import Content2 from './components/context/Content2'
+import { RouterLink, RouterNavLink } from './router/Router'
 
 export default function App() {
   let [user, setUser] = useState('')
 
   return (
     <userContext.Provider value={[user, setUser]}>
-      <HeaderFun />
-      <Content2 />
+      {/* <RouterLink /> */}
+      <RouterNavLink />
+      {/* <HeaderFun />
+      <Content2 /> */}
     </userContext.Provider>
   )
 }
