@@ -9,9 +9,12 @@ import { useState } from 'react'
 // import RefsArray from './components/state-refs/RefsArray'
 // import StateFunc from './components/state-refs/StateFunc'
 import { userContext } from './components/context/context'
-import HeaderFun from './components/context/HeaderFun'
-import Content2 from './components/context/Content2'
-import { RouterLink, RouterNavLink } from './router/Router'
+// import HeaderFun from './components/context/HeaderFun'
+// import Content2 from './components/context/Content2'
+// import { RouterLink, RouterNavLink } from './router/Router'
+import FormSearch from './form/FormSearch'
+import FormBootstrap from './form/FormBootstrap'
+import FormText from './form/FormText'
 
 export default function App() {
   let [user, setUser] = useState('')
@@ -19,7 +22,10 @@ export default function App() {
   return (
     <userContext.Provider value={[user, setUser]}>
       {/* <RouterLink /> */}
-      <RouterNavLink />
+      {/* <RouterNavLink /> */}
+      <FormSearch />
+      <FormBootstrap />
+      <FormText />
       {/* <HeaderFun />
       <Content2 /> */}
     </userContext.Provider>
