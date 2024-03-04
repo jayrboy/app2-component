@@ -1,12 +1,15 @@
 import FormCheck from './FormCheck'
 import FormSelectFile from './FormSelectFile'
+import FormValidation from './FormValidation'
 
 const CheckBox = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div>
       <FormCheck />
       <hr />
       <FormSelectFile />
+      <hr />
+      <FormValidation />
     </div>
   )
 }

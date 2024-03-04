@@ -5,7 +5,7 @@ export default function FormSelectFile() {
   const selectMaxNumFiles = useRef()
   const selectMaxSize = useRef()
 
-  let maxNumfiles = [1, 2, 3, 4, 5]
+  let maxfiles = [1, 2, 3, 4, 5]
   let maxFileSizes = [50, 100, 200, 500, 1000]
 
   const onClickButton = () => {
@@ -32,6 +32,7 @@ export default function FormSelectFile() {
       className="mt-4 mx-auto p-3 rounded"
       style={{ width: '400px', background: '#cefe' }}
     >
+      <h3>Form Select Files</h3>
       <form>
         <div className="form-group mb-3">
           <label htmlFor="maxNumFiles" className="form-label">
@@ -42,8 +43,12 @@ export default function FormSelectFile() {
             className="form-select form-select-sm"
             ref={selectMaxNumFiles}
           >
-            {maxNumfiles.map((i) => {
-              return <option value={i}>{i}</option>
+            {maxfiles.map((i) => {
+              return (
+                <option key={i} value={i}>
+                  {i}
+                </option>
+              )
             })}
           </select>
         </div>
@@ -57,8 +62,12 @@ export default function FormSelectFile() {
             className="form-select form-select-sm"
             ref={selectMaxSize}
           >
-            {maxFileSizes.map((i) => {
-              return <option value={i}>{i}</option>
+            {maxFileSizes.map((n, i) => {
+              return (
+                <option key={i} value={n}>
+                  {n}
+                </option>
+              )
             })}
           </select>
         </div>
