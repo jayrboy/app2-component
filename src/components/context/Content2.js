@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useContext } from 'react'
-import { userContext } from './context'
+import { userContext } from '.'
 
 export default function Content2() {
   let [user, setUser] = useContext(userContext)

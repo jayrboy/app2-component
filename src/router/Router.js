@@ -1,10 +1,10 @@
-import { BrowserRouter, Link, NavLink, Routes, Route } from 'react-router-dom'
+import { Link, NavLink, Routes, Route } from 'react-router-dom'
 import './navlink.css'
 import Home from './Home'
-import Product from './Product'
-import Member from './Member'
-import Contact from './Contact'
 import Navigate from './Navigate'
+import Product from './Product'
+import Form from './Form'
+import CheckBox from './CheckBox'
 
 const RouterLink = () => {
   const navStyle = {
@@ -19,31 +19,29 @@ const RouterLink = () => {
     TextDecoder: 'none',
   }
   return (
-    <BrowserRouter>
-      <nav className={navStyle}>
-        <Link to="/" className={linkStyle}>
-          Home
-        </Link>
-        -&nbsp;
-        <Link to="/product" className={linkStyle}>
-          Product
-        </Link>
-        -&nbsp;
-        <Link to="/member" className={linkStyle}>
-          Member
-        </Link>
-        -&nbsp;
-        <Link to="/contact" className={linkStyle}>
-          Contact Us
-        </Link>
-      </nav>
-    </BrowserRouter>
+    <nav className={navStyle}>
+      <Link to="/" className={linkStyle}>
+        Home
+      </Link>
+      -&nbsp;
+      <Link to="/product" className={linkStyle}>
+        Product
+      </Link>
+      -&nbsp;
+      <Link to="/member" className={linkStyle}>
+        Member
+      </Link>
+      -&nbsp;
+      <Link to="/contact" className={linkStyle}>
+        Contact Us
+      </Link>
+    </nav>
   )
 }
 
 const RouterNavLink = () => {
   return (
-    <BrowserRouter>
+    <>
       <nav className="nav">
         <NavLink
           to="/"
@@ -63,17 +61,17 @@ const RouterNavLink = () => {
         </NavLink>
         -&nbsp;
         <NavLink
-          to="/member"
+          to="/form"
           className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}
         >
-          Member
+          Form
         </NavLink>
         -&nbsp;
         <NavLink
-          to="/contact"
+          to="/checkbox"
           className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}
         >
-          Contact Us
+          CheckBox
         </NavLink>
       </nav>
       {/* ----------------------- */}
@@ -81,12 +79,12 @@ const RouterNavLink = () => {
         <Routes style={{ margin: '20px' }}>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Product />} />
-          <Route path="/member" element={<Member />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/checkbox" element={<CheckBox />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </>
   )
 }
 export { RouterLink, RouterNavLink }
