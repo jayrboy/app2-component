@@ -43,6 +43,9 @@ const RouterNavLink = () => {
   return (
     <>
       <nav className="nav">
+        <img src="./logo192.png" width="28px" alt="" />
+        <span className="text-info">React</span>
+        &nbsp; &nbsp; &nbsp;
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}

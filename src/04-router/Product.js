@@ -37,7 +37,7 @@ const Product = () => {
       </div>
       <br />
       {/* useContext */}
-      <div className=" container border p-2 rounded">
+      <div className=" container border p-2 rounded mb-5">
         <h3>useContext()</h3>
         <HeaderFun />
         <hr />

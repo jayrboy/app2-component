@@ -24,12 +24,6 @@ const Home = () => {
         <Button />
       </div>
       <br />
-      <div className=" container border p-1 rounded">
-        <Header />
-        <Content />
-        <Footer />
-      </div>
-      <br />
       {/* Component */}
       <div className=" container border p-2 rounded">
         <h3>class</h3>
@@ -37,6 +31,12 @@ const Home = () => {
         <br />
         <h3>function</h3>
         <CalculatorFunc />
+      </div>
+      <br />
+      <div className="container border p-1 rounded">
+        <Header />
+        <Content />
+        <Footer />
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ import FormBootstrap from '../05-form/FormBootstrap'
 
 const Form = () => {
   return (
-    <div className="container">
+    <div className="container mb-5">
       <h3>Search</h3>
       <FormSearch />
       <hr />
