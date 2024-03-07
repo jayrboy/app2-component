@@ -36,10 +36,34 @@ export function CalculatorFunc() {
   return (
     <div style={{ textAlign: 'center', marginTop: '20' }}>
       <span>{n1}</span> &nbsp;
-      <button onClick={() => calculate('+')}>+</button> &nbsp;
-      <button onClick={() => calculate('-')}>-</button> &nbsp;
-      <button onClick={() => calculate('*')}>*</button> &nbsp;
-      <button onClick={() => calculate('/')}>/</button> &nbsp;
+      <button
+        className="btn btn-sm btn-outline-primary"
+        onClick={() => calculate('+')}
+      >
+        +
+      </button>
+      &nbsp;
+      <button
+        className="btn btn-sm btn-outline-primary"
+        onClick={() => calculate('-')}
+      >
+        -
+      </button>
+      &nbsp;
+      <button
+        className="btn btn-sm btn-outline-primary"
+        onClick={() => calculate('*')}
+      >
+        *
+      </button>
+      &nbsp;
+      <button
+        className="btn btn-sm btn-outline-primary"
+        onClick={() => calculate('/')}
+      >
+        /
+      </button>
+      &nbsp;
       <span>{n2}</span>
     </div>
   )

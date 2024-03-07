@@ -32,26 +32,36 @@ const RefsArray = () => {
 
   return (
     <table ref={table} border="1" cellPadding={5} style={tableStyles}>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Delete</th>
-      </tr>
-      {data.map((item, i) => {
-        return (
-          <tr
-            ref={(el) => (tr.current[i] = el)}
-            onMouseOver={() => onMouseOverRow(i)}
-            onMouseOut={() => onMouseOutRow(i)}
-          >
-            <td>{item[0]}</td>
-            <td>{item[1]}</td>
-            <td>
-              <button onClick={() => onClickButton(i)}>Delete</button>
-            </td>
-          </tr>
-        )
-      })}
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((item, i) => {
+          return (
+            <tr
+              key={i}
+              ref={(el) => (tr.current[i] = el)}
+              onMouseOver={() => onMouseOverRow(i)}
+              onMouseOut={() => onMouseOutRow(i)}
+            >
+              <td>{item[0]}</td>
+              <td>{item[1]}</td>
+              <td>
+                <button
+                  className="btn btn-sm btn-danger"
+                  onClick={() => onClickButton(i)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          )
+        })}
+      </tbody>
     </table>
   )
 }

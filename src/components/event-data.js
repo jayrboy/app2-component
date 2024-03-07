@@ -16,7 +16,6 @@ export class EvenDataClass extends Component {
   render() {
     return (
       <div style={{ textAlign: 'center', marginTop: '20' }}>
-        <h2>Class</h2>
         <button onClick={(ev) => this.onClickStartStop(ev)}>Start</button>
         <br />
         <br />
@@ -45,14 +44,28 @@ export const EvenDataFunc = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '20' }}>
-      <h2>Function</h2>
-      <button onClick={(ev) => onClickStartStop(ev)}>Start</button>
+      <button
+        className="btn btn-sm btn-danger"
+        onClick={(ev) => onClickStartStop(ev)}
+      >
+        Start
+      </button>
       <br />
       <br />
-      <button onClick={(ev) => onClickAdd(ev)}>10 + 20</button>
+      <button
+        className="btn btn-sm btn-outline-warning"
+        onClick={(ev) => onClickAdd(ev)}
+      >
+        10 + 20
+      </button>
       <br />
       <br />
-      <button onClick={onClickAdd.bind(this)}>30 * 40</button>
+      <button
+        className="btn btn-sm btn-outline-warning"
+        onClick={onClickAdd.bind(this)}
+      >
+        30 * 40
+      </button>
       <br />
       <br />
     </div>
@@ -76,18 +89,22 @@ export const Table = () => {
 
   return (
     <table border="1" cellPadding={5} style={{ margin: 'auto', marginTop: 30 }}>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-      </tr>
-      {data.map((item) => {
-        return (
-          <tr onMouseOver={onMouseOverRow} onMouseOut={onMouseOutRow}>
-            <td>{item[0]}</td>
-            <td>{item[1]}</td>
-          </tr>
-        )
-      })}
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((item, i) => {
+          return (
+            <tr key={i} onMouseOver={onMouseOverRow} onMouseOut={onMouseOutRow}>
+              <td>{item[0]}</td>
+              <td>{item[1]}</td>
+            </tr>
+          )
+        })}
+      </tbody>
     </table>
   )
 }

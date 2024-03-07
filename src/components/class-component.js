@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-export default class Calendar extends Component {
+export class Calendar extends Component {
   getDate() {
     const dayNames = [
       'อาทิตย์',

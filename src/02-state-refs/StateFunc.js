@@ -30,9 +30,26 @@ const StateFunc = () => {
       <div style={msgboxSyle}>{text}</div>
       <br />
       <br />
-      <button onClick={onClickSetText}>ข้อความ</button>&nbsp;
-      <button onClick={onClickZoomIn}>เพิ่มขนาด</button>&nbsp;
-      <button onClick={() => setSize(size - 1)}>ลดขนาด</button>
+      <button
+        className="btn btn-sm btn-outline-primary"
+        onClick={onClickSetText}
+      >
+        ข้อความ
+      </button>
+      &nbsp;
+      <button
+        className="btn btn-sm btn-outline-success"
+        onClick={onClickZoomIn}
+      >
+        เพิ่มขนาด
+      </button>
+      &nbsp;
+      <button
+        className="btn btn-sm btn-outline-warning"
+        onClick={() => setSize(size - 1)}
+      >
+        ลดขนาด
+      </button>
     </div>
   )
 }

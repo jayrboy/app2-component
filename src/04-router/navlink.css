@@ -1,19 +1,28 @@
 .nav {
-    background-color: #ced;
-    padding: 7px;
-    text-align: center;
-    margin: 15px;
+  background-color: #ffa07a;
+  padding: 7px;
+  text-align: center;
+  margin: 15px;
 }
 
-.menu {       /* สำหรับสถานะ inactive */
-    color: blue;
-    text-decoration: none;
-    padding: 2px 5px;    
+.menu {
+  /* สำหรับสถานะ inactive */
+  color: black;
+  text-decoration: none;
+  padding: 2px 5px;
 }
 
-.active_menu {      /* สำหรับสถานะ active */
-    color: red;
-    background-color: yellow;
-    text-decoration: none;
-    padding: 2px 5px;
+.menu:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+  color: red;
+}
+
+.active_menu {
+  /* สำหรับสถานะ active */
+  color: white;
+  background-color: #ff6347;
+  text-decoration: none;
+  padding: 2px 5px;
+  border-radius: 5px;
 }

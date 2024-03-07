@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useContext } from 'react'
-import { userContext } from '.'
+import { userContext } from './context'
 
 export default function Content2() {
   let [user, setUser] = useContext(userContext)
@@ -24,7 +24,11 @@ export default function Content2() {
       ) : (
         <span>
           Please{' '}
-          <a href="#" onClick={onClickSignin}>
+          <a
+            className="btn btn-sm btn-primary"
+            href="#"
+            onClick={onClickSignin}
+          >
             Signin
           </a>
         </span>

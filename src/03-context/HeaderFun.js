@@ -28,19 +28,24 @@ export default function HeaderFun() {
       <a href="#">Content</a> &nbsp;
       {user ? (
         <span>
-          [{user}&nbsp;:&nbsp;{' '}
-          <a href=" " onClick={onClickSignout}>
+          {user}&nbsp;:&nbsp;
+          <a
+            className="btn btn-sm btn-outline-danger"
+            href=" "
+            onClick={onClickSignout}
+          >
             Signout
-          </a>{' '}
-          ]
+          </a>
         </span>
       ) : (
         <span>
-          [{' '}
-          <a href=" " onClick={onClickSignin}>
+          <a
+            className="btn btn-sm btn-outline-primary"
+            href=" "
+            onClick={onClickSignin}
+          >
             Signin
-          </a>{' '}
-          ]
+          </a>
         </span>
       )}
     </div>

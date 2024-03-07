@@ -26,10 +26,21 @@ const RefsFunc = () => {
       <span>=</span>&nbsp;
       <span ref={result}>?</span>
       <div>
-        <button onClick={calculate}>+</button>&nbsp;
-        <button onClick={calculate}>-</button>&nbsp;
-        <button onClick={calculate}>*</button>&nbsp;
-        <button onClick={calculate}>/</button>
+        <button className="btn btn-sm btn-outline-danger" onClick={calculate}>
+          +
+        </button>
+        &nbsp;
+        <button className="btn btn-sm btn-outline-warning" onClick={calculate}>
+          -
+        </button>
+        &nbsp;
+        <button className="btn btn-sm btn-outline-danger" onClick={calculate}>
+          *
+        </button>
+        &nbsp;
+        <button className="btn btn-sm btn-outline-warning" onClick={calculate}>
+          /
+        </button>
       </div>
     </div>
   )
