@@ -1,6 +1,6 @@
-import FormSearch from '../form/FormSearch'
-import FormText from '../form/FormText'
-import FormBootstrap from '../form/FormBootstrap'
+import FormSearch from '../05-form/FormSearch'
+import FormText from '../05-form/FormText'
+import FormBootstrap from '../05-form/FormBootstrap'
 
 const Form = () => {
   return (

@@ -4,7 +4,7 @@ import Home from './Home'
 import Navigate from './Navigate'
 import Product from './Product'
 import Form from './Form'
-import CheckBox from '../checkbox/CheckBox'
+import CheckBox from '../06-checkbox/CheckBox'
 
 const RouterLink = () => {
   const navStyle = {

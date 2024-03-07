@@ -28,18 +28,19 @@ const FormText = () => {
     >
       <form>
         <div className="form-group mb-3">
-          <label htmlFor="login">ชื่อผู้ใช้ (Login)</label>
-          <input type="text" id="login" name="login" className="form-control" />
+          <label htmlFor="user">ชื่อผู้ใช้ (Username)</label>
+          <input type="text" id="user" name="user" className="form-control" />
         </div>
         <div className="form-group mb-3">
-          <label htmlFor="pswd">รหัสผ่าน</label>
+          <label htmlFor="pswd1">รหัสผ่าน</label>
           <input
             type="password"
-            id="pswd"
-            name="pswd"
+            id="pswd1"
+            name="pswd1"
             className="form-control"
             ref={textPswd}
             onBlur={onBlurPassword}
+            autoComplete="current-pswd1"
           />
         </div>
         <div className="form-group mb-3">
@@ -51,6 +52,7 @@ const FormText = () => {
             className="form-control"
             ref={textPswd2}
             onBlur={onBlurPassword2}
+            autoComplete="current-pswd2"
           />
         </div>
         <div className="form-group mb-3">

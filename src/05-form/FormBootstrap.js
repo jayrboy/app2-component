@@ -20,6 +20,7 @@ const FormBootstrap = () => {
             id="pswd"
             name="pswd"
             className="form-control"
+            autoComplete="current-pswd"
           />
         </div>
         <div className="form-group mb-4">
