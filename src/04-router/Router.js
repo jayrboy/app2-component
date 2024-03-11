@@ -5,6 +5,7 @@ import Navigate from './Navigate'
 import Product from './Product'
 import Form from './Form'
 import CheckBox from '../06-checkbox/CheckBox'
+import RestApi from '../08-rest-api/RestApi'
 
 const RouterLink = () => {
   const navStyle = {
@@ -76,15 +77,22 @@ const RouterNavLink = () => {
         >
           CheckBox
         </NavLink>
+        <NavLink
+          to="/rest-api"
+          className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}
+        >
+          REST API
+        </NavLink>
       </nav>
       {/* ----------------------- */}
       <div className="content">
         <Routes style={{ margin: '20px' }}>
+          <Route path="/*" element={<Navigate to="/" />} />
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Product />} />
           <Route path="/form" element={<Form />} />
           <Route path="/checkbox" element={<CheckBox />} />
-          <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="/rest-api" element={<RestApi />} />
         </Routes>
       </div>
     </>

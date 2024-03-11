@@ -4,7 +4,7 @@ import FormValidation from './FormValidation'
 
 const CheckBox = () => {
   return (
-    <div>
+    <div className="container">
       <FormCheck />
       <hr />
       <FormSelectFile />
