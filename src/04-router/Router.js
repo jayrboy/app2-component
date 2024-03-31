@@ -7,6 +7,13 @@ import Form from './Form'
 import CheckBox from '../06-checkbox/CheckBox'
 import RestApi from '../08-rest-api/RestApi'
 
+import MongoDB from '../09-mongoose-api/MongoDB'
+import DBCreate from '../09-mongoose-api/db-create'
+import DBRead from '../09-mongoose-api/db-read'
+import DBUpdate from '../09-mongoose-api/db-update'
+import DBDelete from '../09-mongoose-api/db-delete'
+import DBPaginate from '../09-mongoose-api/db-paginate'
+
 const RouterLink = () => {
   const navStyle = {
     backgroundColor: '#ced',
@@ -83,6 +90,12 @@ const RouterNavLink = () => {
         >
           REST API
         </NavLink>
+        <NavLink
+          to="/db"
+          className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}
+        >
+          Database
+        </NavLink>
       </nav>
       {/* ----------------------- */}
       <div className="content">
@@ -93,6 +106,12 @@ const RouterNavLink = () => {
           <Route path="/form" element={<Form />} />
           <Route path="/checkbox" element={<CheckBox />} />
           <Route path="/rest-api" element={<RestApi />} />
+          <Route path="/db" element={<MongoDB />} />
+          <Route path="/db/create" element={<DBCreate />} />
+          <Route path="/db/read" element={<DBRead />} />
+          <Route path="/db/update" element={<DBUpdate />} />
+          <Route path="/db/delete" element={<DBDelete />} />
+          <Route path="/db/paginate" element={<DBPaginate />} />
         </Routes>
       </div>
     </>

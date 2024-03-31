@@ -15,7 +15,10 @@ const FormPost = () => {
       headers: { 'Content-Type': 'application/json' },
     })
       .then((res) => res.text())
-      .then((result) => setPostedData(result)) // update state
+      .then((result) => {
+        console.log(result)
+        setPostedData(result)
+      }) // update state
       .catch((err) => alert(err))
   }
 
