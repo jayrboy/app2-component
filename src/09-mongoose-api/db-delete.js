@@ -7,7 +7,7 @@ export default function DBDelete() {
   const form = React.useRef()
 
   React.useEffect(() => {
-    fetch('/api/db/read')
+    fetch('https://vercel-server-react.vercel.app/api/db/read')
       .then((response) => response.json())
       .then((result) => {
         if (result.length > 0) {

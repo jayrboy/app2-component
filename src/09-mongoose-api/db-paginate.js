@@ -13,7 +13,7 @@ export default function DBPaginate() {
     let params = new URLSearchParams(qStr)
 
     //นำส่วน Query String ไปต่อท้าย URL เป้าหมายของฝั่งเซิร์ฟเวอร์
-    fetch('/api/db/paginate?' + params)
+    fetch('https://vercel-server-react.vercel.app/api/db/paginate?' + params)
       .then((response) => response.json())
       .then((result) => {
         if (result.totalDocs > 0) {

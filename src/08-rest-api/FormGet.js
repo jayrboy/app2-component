@@ -8,7 +8,7 @@ const FormGet = () => {
     event.preventDefault()
     const formData = new FormData(form.current)
     let params = new URLSearchParams(formData) //.toString()
-    let URL = '/api/form-get?' + params
+    let URL = 'https://vercel-server-react.vercel.app/api/form-get?' + params
 
     fetch(URL)
       .then((response) => response.json())

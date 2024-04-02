@@ -10,7 +10,7 @@ export default function DBCreate() {
     const fd = new FormData(form.current)
     const fe = Object.fromEntries(fd.entries())
 
-    fetch('/api/db/create', {
+    fetch('https://vercel-server-react.vercel.app/api/db/create', {
       method: 'POST',
       body: JSON.stringify(fe),
       headers: { 'Content-Type': 'application/json' },

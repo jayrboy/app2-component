@@ -7,7 +7,7 @@ const RestBasic = () => {
   let [footballResult, setFootballResult] = useState('')
 
   const onClickShowTime = () => {
-    fetch('/api/server-time')
+    fetch('https://vercel-server-react.vercel.app/api/server-time')
       .then((response) => response.json())
       .then((result) => {
         let r = (
@@ -21,7 +21,7 @@ const RestBasic = () => {
   }
 
   const onClickFootballResult = () => {
-    fetch('/api/football-result')
+    fetch('https://vercel-server-react.vercel.app/api/football-result')
       .then((response) => response.text())
       .then((result) => setFootballResult(result))
       .catch((err) => alert(err))
