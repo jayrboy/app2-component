@@ -1,6 +1,6 @@
-import { Calendar, Button } from '../components/class-component'
-import { Header, Content, Footer } from '../components/func-component'
-import { CalculatorClass, CalculatorFunc } from '../components/calculator'
+import { Calendar, Button } from '../class-component'
+import { Header, Content, Footer } from '../func-component'
+import { CalculatorClass, CalculatorFunc } from '../calculator'
 
 const Home = () => {
   return (

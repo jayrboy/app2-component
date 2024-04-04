@@ -1,6 +1,6 @@
 /* eslint-disable */
 import './products.css'
-import { EvenDataClass, EvenDataFunc, Table } from '../components/event-data'
+import { EvenDataClass, EvenDataFunc, Table } from '../event-data'
 
 import RefsFunc from '../02-state-refs/RefsFunc'
 import RefsArray from '../02-state-refs/RefsArray'
