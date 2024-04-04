@@ -13,6 +13,7 @@ import DBRead from '../09-mongoose-api/db-read'
 import DBUpdate from '../09-mongoose-api/db-update'
 import DBDelete from '../09-mongoose-api/db-delete'
 import DBPaginate from '../09-mongoose-api/db-paginate'
+import Final from '../final/Final'
 
 const RouterLink = () => {
   const navStyle = {
@@ -96,6 +97,12 @@ const RouterNavLink = () => {
         >
           Database
         </NavLink>
+        <NavLink
+          to="/final"
+          className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}
+        >
+          Exam
+        </NavLink>
       </nav>
       {/* ----------------------- */}
       <div className="content">
@@ -112,6 +119,7 @@ const RouterNavLink = () => {
           <Route path="/db/update" element={<DBUpdate />} />
           <Route path="/db/delete" element={<DBDelete />} />
           <Route path="/db/paginate" element={<DBPaginate />} />
+          <Route path="/final" element={<Final />} />
         </Routes>
       </div>
     </>
